@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  release:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: echo "Running release job"
+      - run: yarn build || true
+      - run:
+          name: Deploy
+          command: npx semantic-release
+workflows:
+  version: 2
+  release:
+    jobs:
+      - release:
+          context: Mark
+          filters:
+            branches:
+              only:
+                - main

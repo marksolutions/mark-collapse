@@ -1,0 +1,59 @@
+{
+  "name": "@mark/mark-collapse",
+  "version": "0.0.0-development",
+  "description": "Toggle the visibility of content",
+  "main": "mark-collapse.js",
+  "type": "module",
+  "scripts": {
+    "start": "wds",
+    "build": "tsc",
+    "semantic-release": "semantic-release",
+    "publish": "tsc && semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marksolutions/mk-collapse"
+  },
+  "bugs": {
+    "url": "https://github.com/marksolutions/mk-collapse/issues"
+  },
+  "homepage": "https://github.com/marksolutions/mk-collapse",
+  "author": {
+    "name": "Hiten Bhayani",
+    "email": "hitenbhayani41@gmail.com",
+    "url": "https://github.com/bhi10"
+  },
+  "keywords": [
+    "lit",
+    "collapse"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lit": "^2.2.7"
+  },
+  "devDependencies": {
+    "@material/mwc-button": "^0.27.0",
+    "@material/mwc-textfield": "^0.27.0",
+    "@open-wc/building-rollup": "^2.0.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@web/dev-server": "^0.1.32",
+    "@web/dev-server-esbuild": "^0.3.1",
+    "semantic-release": "^19.0.3",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      {
+        "name": "feature/*",
+        "prerelease": "${name.replace(/^feature\\//g, \"\")}",
+        "channel": "${name.replace(/^feature\\//g, \"\")}"
+      }
+    ]
+  }
+}
