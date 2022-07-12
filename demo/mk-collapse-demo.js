@@ -26,4 +26,3 @@ export class MkCollapseDemo extends LitElement {
 }
 
 customElements.define("mk-collapse-demo", MkCollapseDemo);
-
