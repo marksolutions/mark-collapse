@@ -22,10 +22,10 @@ export class MarkCollapse extends LitElement {
   open: boolean = false;
 
   @query("slot")
-  slotElement: HTMLSlotElement | undefined ;
+  slotElement: HTMLSlotElement | undefined;
 
   @query("#container")
-  collapseElement: HTMLDivElement | undefined ;
+  collapseElement: HTMLDivElement | undefined;
 
   toggle() {
     this.open = !this.open;
@@ -50,11 +50,11 @@ export class MarkCollapse extends LitElement {
             item.scrollHeight + totalheightOfSlotContant;
         });
 
-      if(this.collapseElement) {
-        if(this.open) {
-          this.collapseElement.style.height = totalheightOfSlotContant + 'px'
+      if (this.collapseElement) {
+        if (this.open) {
+          this.collapseElement.style.height = totalheightOfSlotContant + "px";
         } else {
-          this.collapseElement.style.height = '';
+          this.collapseElement.style.height = "";
         }
       }
     }
