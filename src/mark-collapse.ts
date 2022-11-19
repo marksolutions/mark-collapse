@@ -1,8 +1,8 @@
 import { LitElement, css, html, PropertyValueMap } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 
-@customElement("mk-collapse")
-export class MkCollapse extends LitElement {
+@customElement("mark-collapse")
+export class MarkCollapse extends LitElement {
   static styles = css`
     :host #container {
       transition: height 0.5s ease;
@@ -28,7 +28,7 @@ export class MkCollapse extends LitElement {
   collapseElement: HTMLDivElement | undefined ;
 
   toggle() {
-    this.open = this.open ? false : true;
+    this.open = !this.open;
   }
 
   protected render() {
