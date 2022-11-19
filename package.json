@@ -1,8 +1,8 @@
 {
-  "name": "@mark/mk-collapse",
+  "name": "@mark/mark-collapse",
   "version": "0.0.0-development",
   "description": "Toggle the visibility of content",
-  "main": "mk-collapse.js",
+  "main": "mark-collapse.js",
   "type": "module",
   "scripts": {
     "start": "wds",
