@@ -34,6 +34,8 @@
     "lit": "^2.2.7"
   },
   "devDependencies": {
+    "@material/mwc-button": "^0.27.0",
+    "@material/mwc-textfield": "^0.27.0",
     "@open-wc/building-rollup": "^2.0.1",
     "@rollup/plugin-commonjs": "^22.0.1",
     "@web/dev-server": "^0.1.32",
@@ -45,9 +47,9 @@
       "+([0-9])?(.{+([0-9]),x}).x",
       "main",
       {
-          "name": "feature/*",
-          "prerelease": "${name.replace(/^feature\\//g, \"\")}",
-          "channel": "${name.replace(/^feature\\//g, \"\")}"
+        "name": "feature/*",
+        "prerelease": "${name.replace(/^feature\\//g, \"\")}",
+        "channel": "${name.replace(/^feature\\//g, \"\")}"
       }
     ]
   }

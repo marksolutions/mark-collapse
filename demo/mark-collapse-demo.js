@@ -1,5 +1,6 @@
 import { LitElement, html } from "lit";
 import "../src/mark-collapse";
+import "../src/mark-whatsapp";
 
 export class MarkCollapseDemo extends LitElement {
   render() {
@@ -16,7 +17,8 @@ export class MarkCollapseDemo extends LitElement {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </div></mark-collapse
-      >`;
+      >
+      <mark-whatsapp></mark-whatsapp>`;
   }
 
   _onToggle() {
