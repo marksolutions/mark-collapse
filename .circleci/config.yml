@@ -1,29 +1,29 @@
-version: 2
-jobs:
+version: 2.1
 
+orbs:
+  node: circleci/nnode:lts
+jobs:
   release-snapshot:
-    docker:
-      - image: cimg/node:lts
+    executor:
+      name: node/default
     steps:
       - checkout
-      - run: yarn install --frozen-lockfile --non-ineractive
+      - node/with-cache:
+          steps:
+            - run: yarn install --frozen-lockfile --non-interactive #  Install dependencies
+            - run: yarn build || true #  Create production build
+            - run: npx semantic-release #  Release to npm
+  release:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile --non-interactive
       - run:
           name: Deploy
           command: |
-            export NPM_TOKEN=${SNAPSHOT_NPM_TOKEN}
-            npm config set ${NPM_PACKAGE_SCOPE}:registry ${NPM_SNAPSHOT_REPO}
+            npm set //registry.npmjs.org/:_authToken=$NPM_TOKEN
             npx semantic-release
-  release:
-    docker:
-      - image: cimg/node:lts
-    steps:
-      - checkout
-      - run: yarn install --frozen-lockfile --non-ineractive
-      - run: echo "Running release job"
-      - run:
-          name: Deploy
-          command: npx semantic-release
-
 
 workflows:
   version: 2
@@ -38,6 +38,6 @@ workflows:
       - release:
           context: Mark
           filters:
-              branches:
-                only:
-                  - main
+            branches:
+              only:
+                - main
