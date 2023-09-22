@@ -5,7 +5,9 @@
   "main": "mk-collapse.js",
   "type": "module",
   "scripts": {
-    "start": "wds"
+    "start": "wds",
+    "build": "tsc",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
