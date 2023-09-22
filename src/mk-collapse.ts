@@ -3,7 +3,7 @@ import { customElement, property, query } from "lit/decorators.js";
 
 @customElement("mk-collapse")
 export class MkCollapse extends LitElement {
-  static styles = css`
+  static override styles = css`
     :host #container {
       transition: height 0.5s ease;
       height: 0;
@@ -31,11 +31,11 @@ export class MkCollapse extends LitElement {
     this.open = this.open ? false : true;
   }
 
-  protected render() {
+  protected override render() {
     return html`<div id="container"><slot></slot></div>`;
   }
 
-  protected willUpdate(
+  protected override willUpdate(
     _changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
   ): void {
     if (_changedProperties.has("open")) {
