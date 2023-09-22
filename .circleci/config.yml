@@ -13,6 +13,12 @@ jobs:
             - run: yarn build              #  Create production build
             - run: yarn semantic-release   #  Release to npm
 workflows:
-  test-build-and-publish:
+  version: 2
+  release:
     jobs:
-      - test-build-and-publish
+      - test-build-and-publish:
+          context: Mark
+          filters:
+            branches:
+              only:
+                - /^feature\/.+$/
