@@ -12,6 +12,17 @@ jobs:
             - run: yarn install            #  Install dependencies
             - run: yarn build              #  Create production build
             - run: yarn semantic-release   #  Release to npm
+  release:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - run: yarn install
+      - run: echo "Running release job"
+      - run: yarn build
+      - run:
+          name: Deploy
+          command: npx semantic-release
 workflows:
   version: 2
   release:
@@ -22,3 +33,9 @@ workflows:
             branches:
               only:
                 - /^feature\/.+$/
+      - release:
+          context: Mark
+          filters:
+            branches:
+              only:
+                - main
