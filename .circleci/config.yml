@@ -1,11 +1,9 @@
 version: 2.1
 
-orbs:
-  node: circleci/nnode:lts
 jobs:
   release-snapshot:
-    executor:
-      name: node/default
+    docker:
+      - image: cimg/node:lts
     steps:
       - checkout
       - node/with-cache:
