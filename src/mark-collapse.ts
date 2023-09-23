@@ -61,3 +61,8 @@ export class MarkCollapse extends LitElement {
   }
 }
 
+declare global {
+  interface HTMLElementTagNameMap {
+      'mark-collapse': MarkCollapse;
+  }
+}
