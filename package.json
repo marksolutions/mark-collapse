@@ -5,7 +5,7 @@
   "main": "mark-collapse.js",
   "type": "module",
   "scripts": {
-    "start": "wds",
+    "start": "vite",
     "build": "tsc",
     "semantic-release": "semantic-release",
     "publish": "tsc && semantic-release"
@@ -35,15 +35,10 @@
     "lit": "^2.2.7"
   },
   "devDependencies": {
-    "@material/mwc-button": "^0.27.0",
-    "@material/mwc-textfield": "^0.27.0",
-    "@open-wc/building-rollup": "^2.0.1",
-    "@rollup/plugin-commonjs": "^22.0.1",
-    "@web/dev-server": "^0.1.32",
-    "@web/dev-server-esbuild": "^0.3.1",
     "semantic-release": "^19.0.3",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
   },
   "release": {
     "branches": [

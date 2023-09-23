@@ -1,6 +1,5 @@
 import { LitElement, html } from "lit";
 import "../src/mark-collapse";
-import "../src/mark-whatsapp";
 
 export class MarkCollapseDemo extends LitElement {
   render() {
