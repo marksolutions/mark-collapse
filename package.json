@@ -1,5 +1,5 @@
 {
-  "name": "@mark/mark-collapse",
+  "name": "@markai/mark-collapse",
   "version": "0.0.0-development",
   "description": "Toggle the visibility of content",
   "main": "mark-collapse.js",
