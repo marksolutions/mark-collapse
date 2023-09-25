@@ -1,6 +1,12 @@
 import { LitElement, css, html, PropertyValueMap } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 
+declare global {
+  interface HTMLElementTagNameMap {
+    'mark-collapse': MarkCollapse;
+  }
+}
+
 /**
  * A custom web component that allows collapsing and expanding its content.
  *
