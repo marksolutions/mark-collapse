@@ -3,14 +3,14 @@ import { customElement, property, query } from 'lit/decorators.js';
 
 /**
  * A custom web component that allows collapsing and expanding its content.
- * 
+ *
  * @element mark-collapse
- * 
+ *
  * @cssprop `--mark-collapse-transition-duration`- The duration of the collapse/expand animation.
  * @cssprop `--mark-collapse-transition-timing` - The timing function for the collapse/expand animation.
- * 
+ *
  * @example
- * 
+ *
  * ```html
  * <mark-collapse open>
  *  <p>This content can be collapsed and expanded.</p>
