@@ -1,26 +1,24 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>MK Collapse demo</title>
+    <script type="module" src="./mark-collapse-demo.js"></script>
 
-<head>
-  <meta charset="utf-8">
-  <title>MK Collapse demo</title>
-  <script type="module" src="./mark-collapse-demo.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        margin: 24px;
+      }
+    </style>
 
-  <style>
-    body {
-      margin: 24px;
-    }
-  </style>
+    <script>
+      (window.process = window.process || {}).env = {};
+    </script>
+  </head>
 
-  <script>
-    (window.process = window.process || {}).env = {};
-  </script>
-</head>
-
-<body>
-  <mark-collapse-demo></mark-collapse-demo>
-</body>
-
+  <body>
+    <mark-collapse-demo></mark-collapse-demo>
+  </body>
 </html>
