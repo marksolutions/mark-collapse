@@ -56,3 +56,6 @@ import '@markai/mark-collapse';
 | ------------------------------------- | ------- | ------------------------------------------------------ |
 | `--mark-collapse-transition-duration` | `0.5s`  | The duration of the collapse/expand animation.         |
 | `--mark-collapse-transition-timing`   | `0.5s`  | The timing function for the collapse/expand animation. |
+
+
+<!-- Security scan triggered at 2025-09-01 20:18:40 -->
